@@ -22,7 +22,6 @@ body {
     --color-info: #e93f3b;
     color: var(--color-text);
     background-color: var(--color-bg);
-    font-family: ltc-bodoni-175, serif;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
 }
