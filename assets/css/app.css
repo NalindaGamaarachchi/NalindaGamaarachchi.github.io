@@ -185,6 +185,9 @@ canvas {
 }
 
 @media screen and (min-width: 10em) {
+    #intro--banner {
+        font-size: 34px
+    }
     .message {
         display: none;
     }
