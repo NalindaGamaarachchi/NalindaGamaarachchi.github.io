@@ -12,6 +12,7 @@ import { media, msToNum, numToMs } from 'utils/style'
 import { tokens } from 'components/ThemeProvider/theme'
 import { blurOnMouseUp } from 'utils/focus'
 import './index.css'
+import mainIcon from '../../assets/NG.png'
 
 const NavbarIcons = () => (
     <div className="navbar__nav-icons">
@@ -62,7 +63,9 @@ function Header(props) {
                 onClick={handleMobileNavClick}
                 onMouseUp={blurOnMouseUp}
             >
-                <Monogram highlight />
+                {/* Add logo to this */}
+                {/* <Monogram highlight /> */}
+                <img src={mainIcon} alt="" height={18} />
             </RouterLink>
             <NavToggle
                 onClick={() => dispatch({ type: 'toggleMenu' })}
