@@ -7,7 +7,7 @@ import DecoderText from 'components/DecoderText'
 import Divider from 'components/Divider'
 import Image from 'components/Image'
 import Section from 'components/Section'
-import ProfileImg from 'assets/slient-boy.png'
+import ProfileImg from '../../assets/main-profile.png'
 import ProfileImgPlaceholder from 'assets/profile-placeholder.jpg'
 import { reflow } from 'utils/transition'
 import { media } from 'utils/style'
@@ -33,14 +33,13 @@ const ProfileText = ({ status, titleId }) => (
             size="l"
         >
             I'm a software engineering undergraduate with a passion for developing
-            innovative mobile and web applications. My passion for
-            software development started from a young age, and since then, I enjoy working on both mobile
-            and web applications, and I have experience in developing web applications
-            using React, Angular, Node.js, Next.js, MongoDB, SQL, and three.js.
-            Additionally, I have developed native iOS mobile applications and have
-            experience with ARKit and CoreML in iOS. My love for software engineering
-            drives me to continually improve and develop innovative solutions to
-            real-world problems.
+            innovative mobile and web applications. My passion for software development
+            started from a young age, and since then, I enjoy working on both mobile and
+            web applications, and I have experience in developing web applications using
+            React, Angular, Node.js, Next.js, MongoDB, SQL, and three.js. Additionally, I
+            have developed native iOS mobile applications and have experience with ARKit
+            and CoreML in iOS. My love for software engineering drives me to continually
+            improve and develop innovative solutions to real-world problems.
         </Text>
         <Text
             className={classNames(
@@ -104,8 +103,8 @@ const Profile = ({ id, visible, sectionRef }) => {
                                 <Image
                                     reveal
                                     delay={100}
-                                    placeholder={ProfileImgPlaceholder}
-                                    srcSet={`${ProfileImg} 480w, ${ProfileImg} 960w`}
+                                    placeholder={ProfileImg}
+                                    srcSet={`${ProfileImg} 500w, ${ProfileImg} 1000w`}
                                     sizes={`(max-width: ${media.mobile}px) 100vw, 480px`}
                                     alt="Profile"
                                 />
