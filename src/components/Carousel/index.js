@@ -84,7 +84,7 @@ const Carousel = ({ width, height, images, placeholder, ...rest }) => {
         renderer.current.setSize(width, height)
         renderer.current.domElement.style.width = '100%'
         renderer.current.domElement.style.height = 'auto'
-        scene.current.background = new Color(0x111111)
+        scene.current.background = new Color(0xff0000)
         camera.current.position.z = 1
 
         return () => {
@@ -130,6 +130,7 @@ const Carousel = ({ width, height, images, placeholder, ...rest }) => {
                 transparent: false,
                 opacity: 1,
             })
+            
 
             geometry.current = new PlaneBufferGeometry(width, height, 1)
             imagePlane.current = new Mesh(geometry.current, material.current)

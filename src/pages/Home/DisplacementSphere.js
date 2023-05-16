@@ -45,6 +45,7 @@ const DisplacementSphere = props => {
     const prefersReducedMotion = usePrefersReducedMotion()
     const isInViewport = useInViewport(canvasRef)
     const windowSize = useWindowSize()
+    
 
     useEffect(() => {
         const { innerWidth, innerHeight } = window
@@ -64,11 +65,13 @@ const DisplacementSphere = props => {
         scene.current = new Scene()
 
         material.current = new MeshPhongMaterial()
+        
         material.current.onBeforeCompile = shader => {
             uniforms.current = UniformsUtils.merge([
                 UniformsLib['ambient'],
                 UniformsLib['lights'],
                 shader.uniforms,
+                { diffuse: { value: new Color(1, 0, 0) } },
                 { time: { type: 'f', value: 0 } },
             ])
 
@@ -77,9 +80,12 @@ const DisplacementSphere = props => {
             shader.fragmentShader = fragShader
         }
 
+
         geometry.current = new SphereBufferGeometry(32, 128, 128)
+        
 
         sphere.current = new Mesh(geometry.current, material.current)
+        
         sphere.current.position.z = 0
         sphere.current.modifier = Math.random()
         scene.current.add(sphere.current)
