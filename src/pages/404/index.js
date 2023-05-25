@@ -93,17 +93,6 @@ function NotFound() {
                             >
                                 <source src={Notfound} type="video/mp4" />
                             </video>
-                            <a
-                                className={classNames(
-                                    'page-404__credit',
-                                    `page-404__credit--${status}`
-                                )}
-                                href="https://twitter.com/ruinergame"
-                                target="_blank"
-                                rel="noopener noreferrer"
-                            >
-                                Animation from Ruiner
-                            </a>
                         </div>
                     </Fragment>
                 )}
