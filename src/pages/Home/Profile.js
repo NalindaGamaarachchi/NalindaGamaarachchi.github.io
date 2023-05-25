@@ -70,7 +70,7 @@ const Profile = ({ id, visible, sectionRef }) => {
                     <div className="profile__content">
                         <div className="profile__column">
                             <ProfileText status={status} titleId={titleId} />
-                            <Button
+                            {/* <Button
                                 secondary
                                 className={classNames(
                                     'profile__button',
@@ -80,7 +80,7 @@ const Profile = ({ id, visible, sectionRef }) => {
                                 icon="send"
                             >
                                 Contact me
-                            </Button>
+                            </Button> */}
                         </div>
                         <div className="profile__column">
                             <div className="profile__tag" aria-hidden>
